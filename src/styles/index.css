@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #10100f;
+}
+
+::selection {
+  background: rgba(246, 169, 59, 0.35);
+  color: #fff8ec;
+}
+
+.container-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.glass-card {
+  position: relative;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.035)),
+    rgba(18, 17, 16, 0.58);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(24px);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(246, 169, 59, 0.5), rgba(52, 211, 153, 0.18), rgba(255, 255, 255, 0.08));
+  opacity: 0.42;
+}
+
+.noise-layer {
+  position: absolute;
+  inset: -20%;
+  opacity: 0.13;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 4px 4px;
+  animation: grain 8s steps(10) infinite;
+  mix-blend-mode: overlay;
+}
+
+@media (max-width: 768px) {
+  .container-shell {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .glass-card {
+    border-radius: 22px;
+  }
+}

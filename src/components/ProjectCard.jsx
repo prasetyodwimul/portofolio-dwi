@@ -28,10 +28,10 @@ export default function ProjectCard({ project }) {
         ))}
       </div>
       <div className="mt-7 flex flex-wrap gap-3">
-        <Button href="#" className="min-h-10 px-4 py-2" icon={false}>
+        <Button href={project.demoUrl || "#"} className="min-h-10 px-4 py-2" icon={false}>
           Demo
         </Button>
-        <Button href="#" variant="secondary" className="min-h-10 px-4 py-2" icon={false}>
+        <Button href={project.githubUrl || "#"} variant="secondary" className="min-h-10 px-4 py-2" icon={false}>
           GitHub
         </Button>
       </div>

@@ -15,7 +15,8 @@ export const projects = [
     description: "Aplikasi e-commerce makanan dan minuman dengan fitur login, kategori produk, keranjang, transaksi, dan pengelolaan data backend.",
     tech: ["Mobile", "Firebase", "Backend"],
     icon: FaLaptopCode,
-    glow: "from-amber-300 to-emerald-300"
+    glow: "from-amber-300 to-emerald-300",
+    githubUrl: "https://github.com/prasetyodwimul/KurShopAndroid"
   },
   {
     title: "Unity VR Networking Project",

@@ -1,4 +1,4 @@
-import { FaAndroid, FaDatabase, FaGamepad, FaLaptopCode, FaUtensils } from "react-icons/fa";
+import { FaGamepad, FaLaptopCode, FaUtensils } from "react-icons/fa";
 
 export const projects = [
   {
@@ -8,22 +8,6 @@ export const projects = [
     tech: ["Visual Basic", "SQL", "UI Logic"],
     icon: FaUtensils,
     glow: "from-amber-300 to-amber-500"
-  },
-  {
-    title: "Aplikasi Android Lomba Semaphore",
-    categories: ["Mobile"],
-    description: "Aplikasi keyboard semaphore berbasis gambar dengan integrasi Firebase untuk mendukung latihan dan perlombaan semaphore.",
-    tech: ["Android Studio", "Java", "Firebase"],
-    icon: FaAndroid,
-    glow: "from-emerald-300 to-amber-200"
-  },
-  {
-    title: "Sistem Lelang Django + MongoDB",
-    categories: ["Backend", "Web"],
-    description: "Sistem lelang digital dengan pengelolaan data produk, autentikasi dasar, dan fitur unggah gambar.",
-    tech: ["Django", "MongoDB", "Python"],
-    icon: FaDatabase,
-    glow: "from-amber-200 to-stone-400"
   },
   {
     title: "KurShop Food & Drink App",

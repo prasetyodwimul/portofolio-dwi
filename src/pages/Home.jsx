@@ -14,6 +14,7 @@ const roles = ["Web Developer", "Mobile Developer", "Backend Enthusiast", "Creat
 export default function Home() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
+  const [profileImageReady, setProfileImageReady] = useState(true);
 
   useEffect(() => {
     const current = roles[roleIndex];
@@ -87,9 +88,18 @@ export default function Home() {
             <div className="absolute right-6 top-6 h-24 w-24 rounded-full bg-amber-300/15 blur-2xl" />
             <div className="relative">
               <div className="mx-auto grid aspect-square max-w-sm place-items-center rounded-[2rem] border border-stone-200/10 bg-gradient-to-br from-stone-100/10 to-stone-100/[0.02]">
-                <div className="grid h-44 w-44 place-items-center rounded-full bg-gradient-to-br from-amber-200 to-amber-500 text-center font-heading text-6xl font-black text-coal shadow-glow">
-                  PD
-                </div>
+                {profileImageReady ? (
+                  <img
+                    src="/profil.jpg"
+                    alt="Prasetyo Dwi Mulyono"
+                    onError={() => setProfileImageReady(false)}
+                    className="h-48 w-48 rounded-full border border-amber-200/30 object-cover shadow-glow md:h-56 md:w-56"
+                  />
+                ) : (
+                  <div className="grid h-44 w-44 place-items-center rounded-full bg-gradient-to-br from-amber-200 to-amber-500 text-center font-heading text-6xl font-black text-coal shadow-glow">
+                    PD
+                  </div>
+                )}
               </div>
               <div className="mt-7 grid gap-3 sm:grid-cols-3">
                 {[
